@@ -41,42 +41,42 @@ void Config::parse_arg(int argc, char *argv[])
     {
         switch (opt)
         {
-        case 'p':
+        case 'p':   // 服务器端口
         {
             PORT = atoi(optarg);
             break;
         }
-        case 'l':
+        case 'l':   // 同步或异步写日志
         {
             LOGWrite = atoi(optarg);
             break;
         }
-        case 'm':
+        case 'm':   // 组合模式
         {
             TRIGMode = atoi(optarg);
             break;
         }
-        case 'o':
+        case 'o':   // 是否优雅断开连接
         {
             OPT_LINGER = atoi(optarg);
             break;
         }
-        case 's':
+        case 's':   // 数据库连接个数
         {
             sql_num = atoi(optarg);
             break;
         }
-        case 't':
+        case 't':   // 线程个数
         {
             thread_num = atoi(optarg);
             break;
         }
-        case 'c':
+        case 'c':   // 是否关闭日志系统
         {
             close_log = atoi(optarg);
             break;
         }
-        case 'a':
+        case 'a':   // 模型 Reactor 或 Proactor
         {
             actor_model = atoi(optarg);
             break;
