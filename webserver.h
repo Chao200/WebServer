@@ -47,7 +47,7 @@ public:
 public:
     // 基础参数
     int m_port;         // 端口号
-    char *m_root;       // 根目录，即  ……/root/
+    char *m_root;       // 根目录，即  ……/root/，为存放资源的目录
     int m_log_write;    // 日志写入方式，0：同步；1：异步
     int m_close_log;    // 是否关闭日志系统
     int m_actormodel;   // 两种模式
