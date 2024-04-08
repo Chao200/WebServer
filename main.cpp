@@ -4,9 +4,9 @@ int main(int argc, char *argv[])
 {
     // 需要修改的数据库信息
     // TODO
-    string user = "root";           // 用户名
-    string passwd = "root";         // 密码
-    string databasename = "qgydb";  // 数据库名
+    string user = "root";                   // 用户名
+    string passwd = "@Xiaochao200";         // 密码
+    string databasename = "yourdb";         // 数据库名
 
     // 命令行解析
     Config config;
