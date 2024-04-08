@@ -19,11 +19,13 @@ Linux 下 C++ 轻量级 Web 服务器
 
 ## 安装依赖
 
+- C++ 和 make
 ```bash
 sudo install make
 sudo install g++
 ```
 
+- MySQL 服务器
 ```bash
 sudo apt install mysql-server
 sudo systemctl start mysql
