@@ -31,3 +31,6 @@ Webbench对服务器进行压力测试，经压力测试可以实现上万的并
 > * 所有访问均成功
 
 <div align=center><img src="https://github.com/twomonkeyclub/TinyWebServer/blob/master/root/testresult.png" height="201"/> </div>
+
+rm webbench
+make
