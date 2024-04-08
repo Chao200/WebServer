@@ -48,7 +48,7 @@ void connection_pool::init(string url, string User, string PassWord, string DBNa
 
 		if (con == NULL)
 		{
-			LOG_ERROR("MySQL Error");
+			LOG_ERROR("MySQL Connect Error");
 			exit(1);
 		}
 		connList.push_back(con);	// 添加到池中
