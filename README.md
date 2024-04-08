@@ -167,3 +167,37 @@ sudo apt install libmysqlclient-dev
 sudo mysql -u root -p
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '@Xiaochao200';
 exit;
+
+
+## 测试
+
+sudo apt install libc6-dev
+sudo apt install libtirpc-dev
+sudo ln -s /usr/include/tirpc/rpc/types.h /usr/include/rpc
+sudo ln -s /usr/include/tirpc/netconfig.h /usr/include
+sudo apt-get install universal-ctags
+
+
+Proactor，LT + LT
+QPS = 70363
+./server -m 0 -c 1 -a 0
+./webbench -c 7000 -t 5 http://192.168.64.11:9006/
+
+Proactor，LT + ET
+QPS = 69258
+./server -m 1 -c 1 -a 0
+./webbench -c 7000 -t 5 http://192.168.64.11:9006/
+
+
+Proactor，ET + LT
+QPS = 53796
+./server -m 2 -c 1 -a 0
+./webbench -c 7000 -t 5 http://192.168.64.11:9006/
+
+
+Proactor，ET + ET
+QPS = 60640
+./server -m 3 -c 1 -a 0
+./webbench -c 7000 -t 5 http://192.168.64.11:9006/
+
+QPS = Requests / running
